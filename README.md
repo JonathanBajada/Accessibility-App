@@ -1,11 +1,11 @@
 # cps731_group8
 
 # Project Members
-Kim Hanh Kathy Luc - 500831326  
-Jonathan Bajada - 500798771  
-Aaron Wang - 500777479  
-Andy LIang - 500833782  
-Zamakhshari Abd Al-Ahad - 500751542  
+Kim Hanh Kathy Luc   
+Jonathan Bajada 
+Aaron Wang
+Andy LIang
+Zamakhshari Abd Al-Ahad 
 
 # Application Description
 
