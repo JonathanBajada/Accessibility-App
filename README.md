@@ -1,4 +1,4 @@
-# cps731_group8
+# CPS731 - Project
 
 # Project Members
 Kim Hanh Kathy Luc   
