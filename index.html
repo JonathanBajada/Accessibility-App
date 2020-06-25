@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta charset="UTF-8">
+<title>Visible</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="lab3.css">
+<script src="drag.js"></script>
+<script src="maps.js"></script>
+    <script src="colors.js"></script>
+<script src="jquery-3.4.1.min.js"></script>
+<script>
+var changeFont = function(font){
+console.log(font.value)
+document.getElementById("output-text").style.fontFamily = font.value;
+}
+</script>
+<script>
+var changeSize = function(n) {
+  console.log(n.value)
+  document.getElementById("dropped").style.fontSize = n.value;
+}
+</script>
+<script>
+function Bold()
+{
+
+   var  ban =document.getElementById("dropped").style.fontWeight ;
+
+ if(ban == 'normal')
+    {
+        document.getElementById("dropped").style.fontWeight = 'bold';
+    }
+ else
+    {
+        document.getElementById("dropped").style.fontWeight = 'normal';
+    }
+  }
+</script>
+</head>
+
+
+<body id= "output-text">
+
+
+<!--<input type="file" id="myfileinput" > -->
+<div class="container">
+  <div class="container" id="title">
+    <h1>V I S A B L E</h1>
+  </div>
+</div>
+
+<section>
+   <div class="container" id="drop_zone" ondrop="dropHandler(event);" ondragover="dragOverHandler(event);" ondragend="dragEndHandler(event);">
+         <h3>Select a file:</h3>
+      <tr>
+         <td><input role="button" class="button"  type="file" id="fileToLoad"></td>
+         <td><button role="button" class="button" onclick="loadFileAsText()" >Load Selected File</button></td>
+     </tr>
+<br><br>
+     <button role="button" id="pbutton" class="button" onclick= "Bold()">bold </button>
+
+
+
+       <div class="button">
+       <select role="list" data-func="fontsize" onchange="changeSize(this);">
+           <option role="listitem" value="12px">12px</option>
+           <option role="listitem" value="14px">14px</option>
+           <option role="listitem" value="16px" selected>16px</option>
+           <option role="listitem" value="18px">18px</option>
+           <option role="listitem" value="20px">20px</option>
+           <option role="listitem" value="24px">24px</option>
+           <option role="listitem" value="26px">26px</option>
+           <option role="listitem" value="30px">30px</option>
+           <option role="listitem" value="36px">36px</option>
+       </select>
+     </div>
+
+     <div class="button">
+       <select role="list" data-func="fontname" id="input-font" onchange= "changeFont(this);">
+         <optgroup label="Serif Fonts">
+           <option role="listitem" value="Bree Serif">Bree Serif</option>
+           <option role="listitem" value="Georgia">Georgia</option>
+           <option role="listitem" value="Palatino Linotype">Palatino Linotype</option>
+           <option role="listitem" value="Times New Roman">Times New Roman</option>
+         </optgroup>
+         <optgroup label="Sans Serif Fonts">
+           <option role="listitem" value="Arial" selected>Arial</option>
+           <option role="listitem" value="Arial Black">Arial Black</option>
+           <option role="listitem" value="Asap">Asap</option>
+           <option role="listitem" value="Comic Sans MS">Comic Sans MS</option>
+           <option role="listitem" value="Impact">Impact</option>
+           <option role="listitem" value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+           <option role="listitem" value="Tahoma">Tahoma</option>
+           <option role="listitem" value="Trebuchet MS">Trebuchet MS</option>
+           <option role="listitem" value="Verdana">Verdana</option>
+         </optgroup>
+         <optgroup label="Monospace Fonts">
+           <option role="listitem" value="Courier New">Courier New</option>
+           <option role="listitem" value="Lucida Console">Lucida Console</option>
+         </optgroup>
+       </select>
+     </div>
+
+     <br><br>
+
+     <div id="colourOp">
+
+      <input role="button" id="colourBtn" type="image" src="assets/op1.png" alt="No Styling Option" height="50" width="50" onclick="white()"/>
+      <input role="button" id="colourBtn" type="image" src="assets/op2.png" alt="Black and White Option" height="50" width="50" onclick="outerblack()"/>
+      <input role="button" id="colourBtn" type="image" src="assets/op3.png" alt="Yellow and Black Option" height="50" width="50" onclick="outeryellow()"/>
+      <input role="button" id="colourBtn" type="image" src="assets/op4.png" alt="Black and Yellow Option" height="50" width="50" onclick="blackyellow()"/>
+      <input role="button" id="colourBtn" type="image" src="assets/op5.png" alt="Low Contrast Grey Option" height="50" width="50" onclick="greyscale()"/>
+      <input role="button" id="colourBtn" type="image" src="assets/op6.png" alt="Black and Teal Option" height="50" width="50" onclick="blackTeal()"/>
+      <input role="button" id="colourBtn" type="image" src="assets/op7.png" alt="Low Contrast Grey and White Option" height="50" width="50" onclick="whiteGrey()"/>
+      <input role="button" id="colourBtn" type="image" src="assets/op8.png" alt="Teal and White Option" height="50" width="50" onclick="tealWhite()"/>
+
+     </div>
+
+
+     </div>
+
+
+
+
+</section>
+
+<div id="map" class="container">
+
+  <div>
+    <button role="button" id="play" class="button" onclick="onClickPlay()">play</button>
+    <button role="button" id="stop" class="button" onclick="onClickStop()">stop</button>
+  </div>
+
+  <br>
+
+  <div> <textarea class="text" role="document" id="dropped" cols="100" rows="20" onchange="changeSize(this);"></textarea></div>
+</div>
+
+</body>
+<script src="textToSpeech.js"></script>
+</html>
