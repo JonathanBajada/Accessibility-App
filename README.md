@@ -1,10 +1,10 @@
 # CPS731 - Project
 
 # Project Members
-Kim Hanh Kathy Luc  
-Jonathan Bajada
-Aaron Wang
-Andy LIang
+Kim Hanh, Kathy Luc,  
+Jonathan Bajada,
+Aaron Wang,
+Andy LIang,
 Zamakhshari Abd Al-Ahad 
 
 # Application Description
